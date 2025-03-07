@@ -1,0 +1,21 @@
+# Created by trellis-cli vcanary
+# Documentation: https://roots.io/trellis/docs/vault/
+
+vault_mysql_root_password: kmTF753pAeqyxYsnXO7PAUtyIQjx0QGnpg0asHc694vGvMa6ggkiJNb6MwFVqoer
+vault_users:
+- name: '{{ admin_user }}'
+  password: OKDREfDEbBXFzMQr7JL0phuD3TPPeNh5JFhMWcly0NwALLJHAMcsH0f5J2ia6og5
+  salt: gIol3mh2343NbEXYj8UxtUOSgKtmSvRs9DIQsjFaNUEw1vLoKoxRSmsBfn7l6mbA
+vault_wordpress_sites:
+  tourmacapa.com.br:
+    admin_password: goFAy1xbTggopdEvcQudaOhTlBIV2x7nBatVt8mO33w0AxGRpxPFjGFTfYqn11sI
+    env:
+      db_password: DKmZHdrT9cPlc9F4bh2ud302GJxToWDAq3KcFBvJgog9ZwWrRNuvqqd4KRoOnzJQ
+      auth_key: VKduXhw8ENmK1EWM2lK3ug0AjIzf71cVnf3h6wxHXazVsVaVZQsWvJBHjBJHBJFn
+      secure_auth_key: HgmAYClUKXODN3gDG8hICVS5xcqrWsiCCGSpp3myllkzbfxc4S2ia75Dx6oIVyRf
+      logged_in_key: EhyaMVLMv812aoVQRUlDwqklfrnBFj30ckNkT2je1WOAB2eCi4SRiMLEMejWNujK
+      nonce_key: 66X9kv54WciMD66L7HYki31BD85t4Tl7WvZRlNG8ai9jP81A34xGyiXYcsNZoMsZ
+      auth_salt: OljjTeGtq3VEaDTgMGD2evMWstYfFcFqQzVt0dQORViDoJFHQoC3zU83e3EfmKdM
+      secure_auth_salt: LZGDOfpHXuxrYwCH9KsnvNkk8Z5wf0M7KW1sqPqi53wcaUcqmLgTaHonBhaayI9j
+      logged_in_salt: knrEsTcJ9SbLxCGCqkNIcHPSwz0osUvQq7TihPXEH9ax8mYLVbAPuvS1lhFdn9aJ
+      nonce_salt: A18jHI7udhH820VlvYxDovGpWky4YsepaXryVP4kkKkZJK0lr2JkcVesOZYTp5ze

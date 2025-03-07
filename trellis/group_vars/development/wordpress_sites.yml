@@ -1,0 +1,18 @@
+# Created by trellis-cli vcanary
+# Documentation: https://roots.io/trellis/docs/wordpress-sites/
+
+wordpress_sites:
+  tourmacapa.com.br:
+    site_hosts:
+    - canonical: tourmacapa.test
+      redirects:
+      - www.tourmacapa.test
+    local_path: ../site
+    admin_email: admin@tourmacapa.test
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
