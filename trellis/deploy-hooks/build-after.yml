@@ -3,10 +3,10 @@
 # ⚠️ This example assumes your theme is using Sage 10
 #
 # Uncomment the lines below if you are using Sage 10
-# NOTE: this task will fail if Sage theme is not activated at time of deployment.
-#
-# ---
-# - name: Run Acorn optimize
-#   command: wp acorn optimize
-#   args:
-#     chdir: "{{ deploy_helper.new_release_path }}"
+NOTE: this task will fail if Sage theme is not activated at time of deployment.
+
+---
+- name: Run Acorn optimize
+  command: wp acorn optimize
+  args:
+    chdir: "{{ deploy_helper.new_release_path }}"
