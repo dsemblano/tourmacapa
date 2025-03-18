@@ -1,0 +1,280 @@
+  @import "tailwindcss" theme(static);
+@source "../views/";
+@source "../../app/";
+
+@theme {
+  --color-primary: #3490dc; 
+  --color-secondary: #ffed4a; 
+  --color-accent: #9561e2;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'ibmplexsans';
+    src: url('~@fonts/IBMPlexSans-VariableFont_wdth,wght.ttf') format('truetype-variations');
+    font-display: swap;
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ibmplexsansitalic ';
+    src: url('~@fonts/IBMPlexSans-Italic-VariableFont_wdth,wght.ttf') format('truetype-variations');
+    font-display: swap;
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+/* Colours */
+/* :root {
+    --primary-color: #ff174d;
+    --gray-h: #333;
+} */
+
+/* Menu */
+ul#menu-menu-principal {
+    @apply flex flex-col lg:flex-row gap-x-8
+}
+
+/* Texts */
+h1,
+h2 {
+    font-family: 'ibmplexsans', sans-serif;
+}
+
+p {
+    @apply text-gray-700;
+
+    font-family: 'ibmplexsans', sans-serif;
+    font-size: 1.2rem;
+}
+
+.hero-image img { 
+    @apply rounded-lg
+}
+
+/* Arrow effect */
+.arrow-border {
+
+    position: relative;
+    padding-bottom: 10em;
+    clip-path: polygon(
+      0% 0%, /* Top-left corner */
+      100% 0%, /* Top-right corner */
+      100% 80%, /* Bottom-right corner (before the arrow) */
+      60% 80%, /* Start of the arrow */
+      50% 100%, /* Tip of the arrow */
+      40% 80%, /* End of the arrow */
+      0% 80% /* Bottom-left corner (before the arrow) */
+    );
+  }
+
+  .arrow-border::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent; /* arrow width */
+    border-right: 20px solid transparent; /* arrow width */
+    border-bottom: 20px solid #f1f5f9; /* Match the background color (slate-100) */
+  }
+
+
+.arrow-border {
+  position: relative;
+  padding-bottom: 14rem; /* arrow's height */
+}
+
+  @media (min-width: 1024px) {
+    .arrow-border::after {
+      border-left: 30px solid transparent; /* Larger arrow on larger screens */
+      border-right: 30px solid transparent;
+      border-bottom: 30px solid #f1f5f9;
+    }
+  }
+
+  /* Services */
+  .single_services {
+  --tw-border-opacity: 1;
+  border-color: rgba(232, 232, 232, var(--tw-border-opacity));
+}
+
+.single_services:hover{
+  --tw-border-opacity: 1;
+  border-color: rgba(249, 79, 79, var(--tw-border-opacity));
+}
+
+.single_services{
+  border-radius: 0.75rem;
+  border-style: dashed;
+  border-width: 2px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 52px;
+  padding-bottom: 52px;
+}
+
+.single_services:hover{
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.single_services{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+@media (min-width: 540px){
+  .single_services{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width: 720px){
+  .single_services{
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+}
+
+.services_icon {
+  display: inline-block;
+  position: relative;
+}
+
+.services_icon i {
+  font-size: 3rem;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  --tw-text-opacity: 1;
+  color: rgba(56, 66, 77, var(--tw-text-opacity));
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-x: -50%;
+  --tw-translate-y: -50%;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+.services_shape {
+  fill: #fff1f1;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+.single_services:hover .services_icon i {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.single_services:hover .services_shape {
+  fill: currentColor;
+  --tw-text-opacity: 1;
+  color: rgba(249, 79, 79, var(--tw-text-opacity));
+}
+
+  
+  
+
+/* nanoid css */
+.nanoid-codes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.nanoid-codes-table th,
+.nanoid-codes-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.nanoid-codes-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.nanoid-codes-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.nanoid-codes-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Page with all users with cupom codes */
+.subscriptions-codes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.subscriptions-codes-table th,
+.subscriptions-codes-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.subscriptions-codes-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.subscriptions-codes-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.subscriptions-codes-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Vouchers page */
+.vouchers-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.vouchers-table th,
+.vouchers-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.vouchers-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.vouchers-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.vouchers-table tr:hover {
+    background-color: #f1f1f1;
+}
