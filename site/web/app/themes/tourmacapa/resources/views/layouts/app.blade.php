@@ -19,7 +19,7 @@
 
       @include('sections.header')
 
-      <main id="main" class="main pt-28 bg-orange-400">
+      <main id="main" class="main pt-28">
         @yield('content')
       </main>
 

@@ -2,8 +2,8 @@
     <div class="container">
         <h2 class="text-6xl font-bold text-grayH 2 mb-6">Como funciona?</h2>
 
-        <div class="flex row justify-center">
-            <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+        <div class="flex flex-col lg:flex-row justify-center">
+            <div class="w-full">
                 <div class="single_services text-center mt-8 mx-3">
                     <picture class="services_icon">
                         <i class="lni lni-write"></i>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+            <div class="w-full">
                 <div class="single_services text-center mt-8 mx-3">
                     <picture class="services_icon">
                         <i class="lni lni-write"></i>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+            <div class="w-full">
                 <div class="single_services text-center mt-8 mx-3">
                     <picture class="services_icon">
                         <i class="lni lni-write"></i>
