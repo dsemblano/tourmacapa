@@ -1,9 +1,8 @@
-<section class="">
+<section id="hero" class="bg-amber-400">
     {{-- {!! do_shortcode('[voucher_validation]') !!} --}}
-
     <div class="container">
-        <div class="flex flex-col lg:flex-row p-8">
-            <div class="hero w-full lg:w-1/2">
+        <div class="flex flex-col lg:flex-row">
+            <div class="">
                 <img id="logoname" class="hover:scale-110 transition duration-300 ease-in-out" width="200" height="280"
                 src="{{ Vite::asset('resources/images/TucuFoodlogo.png')}}" alt="Tour Macapá página inicial" />
                 <span class="text-4xl inline-block text-white bg-primaryColor font-bold p-2">Compre 1, Leve 2</span>
@@ -15,7 +14,7 @@
                 </p>
             </div>
     
-            <picture class="hero-image w-full lg:w-1/2">
+            <picture class="hero-image">
                 <img src="{{ Vite::asset('resources/images/bogo-hero.webp')}}" width="600" height="600" alt="Hero image">
             </picture>
     

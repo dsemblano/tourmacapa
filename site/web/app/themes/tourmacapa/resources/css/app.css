@@ -11,6 +11,20 @@
   --font-sans: "ibmplexsans", sans-serif;
 }
 
+@layer utility {
+  .container {
+    padding: var(--container-padding, 2rem); 
+    margin-inline: auto;
+    
+    @variant lg {
+      padding-inline: 4rem;
+    }
+    
+    @variant xl {
+      padding-inline: 5rem;
+    } 
+  }
+}
 
 
 /* Colours */
