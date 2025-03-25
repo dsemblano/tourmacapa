@@ -1,6 +1,6 @@
 <section id="oquee" class="bg-slate-100 arrow-border">
     <div class="container">
-      <div class="flex flex-col lg:flex-row-reverse p-8">
+      <div class="flex flex-col lg:flex-row-reverse">
         <div class="hero w-full lg:w-1/2">
           <img
             id="logoname"

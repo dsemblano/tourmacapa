@@ -1,4 +1,4 @@
-  @import "tailwindcss" theme(static);
+@import "tailwindcss" theme(static);
 @source "../views/";
 @source "../../app/";
 @import './fonts.css';
@@ -13,7 +13,7 @@
 
 @layer utility {
   .container {
-    padding: var(--container-padding, 2rem); 
+    padding: var(--container-padding, 1rem);
     margin-inline: auto;
     
     @variant lg {
