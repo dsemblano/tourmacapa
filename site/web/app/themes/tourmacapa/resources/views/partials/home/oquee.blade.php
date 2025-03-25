@@ -7,7 +7,7 @@
             class="hover:scale-110 transition duration-300 ease-in-out"
             width="100"
             height="90"
-            src="{{ Vite::asset('resources/images/TucuFoodlogo.png')  }}"
+            src="{{ asset('resources/images/TucuFoodlogo.png')  }}"
             alt="Tour Macapá página inicial"
           />
           <h2 class="text-6xl font-bold text-grayH 2 mb-6">
@@ -24,7 +24,7 @@
           </p>
         </div>
         <picture class="hero-image w-full lg:w-1/2">
-          <img src="{{ Vite::asset('resources/images/oquee.jpg') }}" width="600" height="600" alt="Hero image" />
+          <img src="{{ asset('resources/images/oquee.jpg') }}" width="600" height="600" alt="Hero image" />
         </picture>
       </div>
     </div>
