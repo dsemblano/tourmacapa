@@ -1,29 +1,17 @@
   @import "tailwindcss" theme(static);
 @source "../views/";
 @source "../../app/";
+@import './fonts.css';
 
 @theme {
   --color-primary: #3490dc; 
   --color-secondary: #ffed4a; 
   --color-accent: #9561e2;
+  --font-sans: "Tanker Regular", sans-serif;
+  --font-sans: "ibmplexsans", sans-serif;
 }
 
-/* Fonts */
-@font-face {
-    font-family: 'ibmplexsans';
-    src: url('~@fonts/IBMPlexSans-VariableFont_wdth,wght.ttf') format('truetype-variations');
-    font-display: swap;
-    font-weight: 100 900;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'ibmplexsansitalic ';
-    src: url('~@fonts/IBMPlexSans-Italic-VariableFont_wdth,wght.ttf') format('truetype-variations');
-    font-display: swap;
-    font-weight: 100 900;
-    font-style: italic;
-}
 
 /* Colours */
 /* :root {
@@ -39,7 +27,7 @@ ul#menu-menu-principal {
 /* Texts */
 h1,
 h2 {
-    font-family: 'ibmplexsans', sans-serif;
+    font-family: 'Tanker Regular', sans-serif;
 }
 
 p {

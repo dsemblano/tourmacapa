@@ -1,63 +1,160 @@
 <?php
 
-// function generate_vouchers_on_subscription_creation($subscription_id) {
-//     $subscription = ywsbs_get_subscription($subscription_id); // Get subscription object
-//     $user_id = $subscription->user_id; // Get user ID
-//     $voucher_count = 10; // Number of vouchers to generate
+// Creating nanoid tables
+function create_nanoid_codes_table() {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'nanoid_codes';
+    $charset_collate = $wpdb->get_charset_collate();
 
-//     for ($i = 1; $i <= $voucher_count; $i++) {
-//         $coupon_code = 'TUCUFOOD' . strtoupper(wp_generate_password(6, false)); // Generate a unique code
-//         $amount = '100'; // 100% discount (free meal)
-//         $discount_type = 'percent'; // Discount type
+    $sql = "CREATE TABLE $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        code varchar(100) NOT NULL,
+        status varchar(20) NOT NULL DEFAULT 'active',
+        user_id bigint(20) DEFAULT NULL,
+        subscription_id bigint(20) DEFAULT NULL,
+        created_at datetime DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (id)
+    ) $charset_collate;";
 
-//         $coupon = array(
-//             'post_title' => $coupon_code,
-//             'post_content' => '',
-//             'post_status' => 'publish',
-//             'post_author' => 1,
-//             'post_type' => 'shop_coupon'
-//         );
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+}
+register_activation_hook(__FILE__, 'create_nanoid_codes_table');
 
-//         $new_coupon_id = wp_insert_post($coupon);
+// Subscription
 
-//         // Add coupon meta
-//         update_post_meta($new_coupon_id, 'discount_type', $discount_type);
-//         update_post_meta($new_coupon_id, 'coupon_amount', $amount);
-//         update_post_meta($new_coupon_id, 'individual_use', 'yes');
-//         update_post_meta($new_coupon_id, 'usage_limit', '1'); // Limit to one use
-//         update_post_meta($new_coupon_id, 'expiry_date', date('Y-m-d', strtotime('+1 month'))); // Set expiry date
-//         update_post_meta($new_coupon_id, 'customer_email', $subscription->billing_email); // Assign to user
-//     }
-// }
+function generate_vouchers_on_subscription_creation($subscription_id) {
+    $subscription = ywsbs_get_subscription($subscription_id); // Get subscription object
+    $user_id = $subscription->user_id; // Get user ID
+    $voucher_count = 10; // Number of vouchers to generate
 
-// add_action('ywsbs_subscription_created', 'generate_vouchers_on_subscription_creation');
+    for ($i = 1; $i <= $voucher_count; $i++) {
+        $coupon_code = 'TUCUFOOD' . strtoupper(wp_generate_password(6, false)); // Generate a unique code
+        $amount = '100'; // 100% discount (free meal)
+        $discount_type = 'percent'; // Discount type
 
-// // Validation voucher
-// function voucher_validation_form() {
-//     if (isset($_POST['voucher_code'])) {
-//         $voucher_code = sanitize_text_field($_POST['voucher_code']);
-//         $coupon = new WC_Coupon($voucher_code);
+        $coupon = array(
+            'post_title' => $coupon_code,
+            'post_content' => '',
+            'post_status' => 'publish',
+            'post_author' => 1,
+            'post_type' => 'shop_coupon'
+        );
 
-//         if ($coupon->get_id() && $coupon->get_usage_count() < $coupon->get_usage_limit()) {
-//             echo '<p>Voucher is valid!</p>';
-//             // Mark voucher as used
-//             $coupon->set_usage_count($coupon->get_usage_count() + 1);
-//             $coupon->save();
-//         } else {
-//             echo '<p>Invalid voucher or already used.</p>';
-//         }
-//     }
+        $new_coupon_id = wp_insert_post($coupon);
 
-//     echo '
-//     <form method="post">
-//         <label for="voucher_code">Enter Voucher Code:</label>
-//         <input type="text" name="voucher_code" id="voucher_code" required>
-//         <button type="submit">Validate</button>
-//     </form>
-//     ';
-// }
+        // Add coupon meta
+        update_post_meta($new_coupon_id, 'discount_type', $discount_type);
+        update_post_meta($new_coupon_id, 'coupon_amount', $amount);
+        update_post_meta($new_coupon_id, 'individual_use', 'yes');
+        update_post_meta($new_coupon_id, 'usage_limit', '1'); // Limit to one use
+        update_post_meta($new_coupon_id, 'expiry_date', date('Y-m-d', strtotime('+1 month'))); // Set expiry date
+        update_post_meta($new_coupon_id, 'customer_email', $subscription->billing_email); // Assign to user
+    }
+}
 
-// add_shortcode('voucher_validation', 'voucher_validation_form');
+add_action('ywsbs_subscription_created', 'generate_vouchers_on_subscription_creation');
+
+// Validation voucher
+function voucher_validation_form() {
+    if (isset($_POST['voucher_code'])) {
+        $voucher_code = sanitize_text_field($_POST['voucher_code']);
+        $coupon = new WC_Coupon($voucher_code);
+
+        if ($coupon->get_id() && $coupon->get_usage_count() < $coupon->get_usage_limit()) {
+            echo '<p>Voucher is valid!</p>';
+            // Mark voucher as used
+            $coupon->set_usage_count($coupon->get_usage_count() + 1);
+            $coupon->save();
+        } else {
+            echo '<p>Invalid voucher or already used.</p>';
+        }
+    }
+
+    echo '
+    <form method="post">
+        <label for="voucher_code">Enter Voucher Code:</label>
+        <input type="text" name="voucher_code" id="voucher_code" required>
+        <button type="submit">Validate</button>
+    </form>
+    ';
+}
+
+add_shortcode('voucher_validation', 'voucher_validation_form');
+
+// Display nanoid codes
+add_shortcode('display_nanoid_codes', 'display_nanoid_codes_shortcode');
+
+function display_nanoid_codes_shortcode() {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'nanoid_codes';
+    $user_id = get_current_user_id();
+
+    if (!$user_id) {
+        return '<p>Please log in to view your codes.</p>';
+    }
+
+    // Fetch codes for the current user
+    $codes = $wpdb->get_results($wpdb->prepare(
+        "SELECT * FROM $table_name WHERE user_id = %d AND status = 'active'",
+        $user_id
+    ));
+
+    if (empty($codes)) {
+        return '<p>No codes found.</p>';
+    }
+
+    // Display the codes
+    $output = '<ul>';
+    foreach ($codes as $code) {
+        $output .= '<li>' . esc_html($code->code) . '</li>';
+    }
+    $output .= '</ul>';
+
+    return $output;
+}
+
+// login codes
+add_shortcode('view_my_codes', 'view_my_codes_shortcode');
+
+function view_my_codes_shortcode() {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'nanoid_codes';
+    $user_id = get_current_user_id();
+
+    // Check if the user is logged in
+    if (!$user_id) {
+        return '<p>Please <a href="' . wp_login_url() . '">log in</a> to view your codes.</p>';
+    }
+
+    // Fetch codes for the current user
+    $codes = $wpdb->get_results($wpdb->prepare(
+        "SELECT * FROM $table_name WHERE user_id = %d ORDER BY created_at DESC",
+        $user_id
+    ));
+
+    if (empty($codes)) {
+        return '<p>No codes found for your account.</p>';
+    }
+
+    // Display the codes in a table
+    $output = '<h3>Your Generated Codes</h3>';
+    $output .= '<table class="nanoid-codes-table">';
+    $output .= '<thead><tr><th>Code</th><th>Status</th><th>Created At</th></tr></thead>';
+    $output .= '<tbody>';
+
+    foreach ($codes as $code) {
+        $output .= '<tr>';
+        $output .= '<td>' . esc_html($code->code) . '</td>';
+        $output .= '<td>' . esc_html($code->status) . '</td>';
+        $output .= '<td>' . esc_html($code->created_at) . '</td>';
+        $output .= '</tr>';
+    }
+
+    $output .= '</tbody></table>';
+
+    return $output;
+}
 
 // criando a tabela para os códigos únicos - vouchers 
 function create_recovery_codes_table() {
