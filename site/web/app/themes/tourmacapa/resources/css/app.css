@@ -7,8 +7,7 @@
   --color-primary: #3490dc; 
   --color-secondary: #ffed4a; 
   --color-accent: #9561e2;
-  --font-sans: "Tanker Regular", sans-serif;
-  --font-sans: "ibmplexsans", sans-serif;
+  --font-sans: "BespokeSerif", sans-serif;
 }
 
 @layer utility {
@@ -47,7 +46,7 @@ h2 {
 p {
     @apply text-gray-700;
 
-    font-family: 'ibmplexsans', sans-serif;
+    font-family: 'BespokeSerif', sans-serif;
     font-size: 1.2rem;
 }
 
