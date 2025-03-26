@@ -42,7 +42,6 @@
     "roots/wp-password-bcrypt": "1.2.0",
     "wpackagist-theme/twentytwentyfive": "^1.0",
     "wpackagist-plugin/woocommerce":"^9.7.1",
-    "wpackagist-plugin/wordpress-importer":"^0.8.3",
     "wpackagist-plugin/yith-woocommerce-subscription":"^4.4.0",
     "generoi/sage-woocommerce": "^1.1"
   },
