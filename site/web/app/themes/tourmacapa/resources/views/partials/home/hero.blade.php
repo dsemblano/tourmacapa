@@ -1,4 +1,4 @@
-<section id="hero" class="bg-amber-400">
+<section id="hero" class="">
     {{-- {!! do_shortcode('[voucher_validation]') !!} --}}
     <div class="container">
         <div class="flex flex-col lg:flex-row">
