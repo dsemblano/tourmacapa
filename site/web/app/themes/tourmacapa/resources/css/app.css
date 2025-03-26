@@ -4,115 +4,112 @@
 @import './fonts.css';
 
 @theme {
-  --color-primary: #3490dc;
-  --color-secondary: #ffed4a;
+  --color-primary: #3490dc; 
+  --color-secondary: #ffed4a; 
   --color-accent: #9561e2;
-  --font-sans: "BespokeSerif", sans-serif;
+  --font-sans: "Tanker Regular", sans-serif;
+  --font-sans: "ibmplexsans", sans-serif;
 }
 
 @layer utility {
   .container {
     padding: var(--container-padding, 1rem);
     margin-inline: auto;
-
+    
     @variant lg {
       padding-inline: 4rem;
     }
-
+    
     @variant xl {
       padding-inline: 5rem;
-    }
+    } 
   }
 }
 
+
+/* Colours */
+/* :root {
+    --primary-color: #ff174d;
+    --gray-h: #333;
+} */
+
 /* Menu */
 ul#menu-menu-principal {
-  @apply flex flex-col lg:flex-row gap-x-8
+    @apply flex flex-col lg:flex-row gap-x-8
 }
 
 /* Texts */
 h1,
 h2 {
-  font-family: 'Tanker Regular', sans-serif;
+    font-family: 'Tanker Regular', sans-serif;
 }
 
 p {
-  @apply text-gray-700;
+    @apply text-gray-700;
 
-  font-family: 'BespokeSerif', sans-serif;
-  font-size: 1.2rem;
+    font-family: 'ibmplexsans', sans-serif;
+    font-size: 1.2rem;
 }
 
-.hero-image img {
-  @apply rounded-lg
+.hero-image img { 
+    @apply rounded-lg
 }
 
 /* Arrow effect */
 .arrow-border {
 
-  position: relative;
-  padding-bottom: 10em;
-  clip-path: polygon(0% 0%,
-      /* Top-left corner */
-      100% 0%,
-      /* Top-right corner */
-      100% 80%,
-      /* Bottom-right corner (before the arrow) */
-      60% 80%,
-      /* Start of the arrow */
-      50% 100%,
-      /* Tip of the arrow */
-      40% 80%,
-      /* End of the arrow */
-      0% 80%
-      /* Bottom-left corner (before the arrow) */
+    position: relative;
+    padding-bottom: 10em;
+    clip-path: polygon(
+      0% 0%, /* Top-left corner */
+      100% 0%, /* Top-right corner */
+      100% 80%, /* Bottom-right corner (before the arrow) */
+      60% 80%, /* Start of the arrow */
+      50% 100%, /* Tip of the arrow */
+      40% 80%, /* End of the arrow */
+      0% 80% /* Bottom-left corner (before the arrow) */
     );
-}
+  }
 
-.arrow-border::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  /* arrow width */
-  border-right: 20px solid transparent;
-  /* arrow width */
-  border-bottom: 20px solid #f1f5f9;
-  /* Match the background color (slate-100) */
-}
+  .arrow-border::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent; /* arrow width */
+    border-right: 20px solid transparent; /* arrow width */
+    border-bottom: 20px solid #f1f5f9; /* Match the background color (slate-100) */
+  }
 
 
 .arrow-border {
   position: relative;
-  padding-bottom: 14rem;
-  /* arrow's height */
+  padding-bottom: 14rem; /* arrow's height */
 }
 
-@media (min-width: 1024px) {
-  .arrow-border::after {
-    border-left: 30px solid transparent;
-    /* Larger arrow on larger screens */
-    border-right: 30px solid transparent;
-    border-bottom: 30px solid #f1f5f9;
+  @media (min-width: 1024px) {
+    .arrow-border::after {
+      border-left: 30px solid transparent; /* Larger arrow on larger screens */
+      border-right: 30px solid transparent;
+      border-bottom: 30px solid #f1f5f9;
+    }
   }
-}
 
-/* Services */
-.single_services {
+  /* Services */
+  .single_services {
   --tw-border-opacity: 1;
   border-color: rgba(232, 232, 232, var(--tw-border-opacity));
 }
 
-.single_services:hover {
+.single_services:hover{
   --tw-border-opacity: 1;
   border-color: rgba(249, 79, 79, var(--tw-border-opacity));
 }
 
-.single_services {
+.single_services{
   border-radius: 0.75rem;
   border-style: dashed;
   border-width: 2px;
@@ -122,20 +119,20 @@ p {
   padding-bottom: 52px;
 }
 
-.single_services:hover {
+.single_services:hover{
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.single_services {
+.single_services{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   transition-duration: 300ms;
 }
 
-@media (min-width: 540px) {
-  .single_services {
+@media (min-width: 540px){
+  .single_services{
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 24px;
@@ -143,8 +140,8 @@ p {
   }
 }
 
-@media (min-width: 720px) {
-  .single_services {
+@media (min-width: 720px){
+  .single_services{
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 52px;
@@ -200,86 +197,86 @@ p {
   color: rgba(249, 79, 79, var(--tw-text-opacity));
 }
 
-
-
+  
+  
 
 /* nanoid css */
 .nanoid-codes-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 .nanoid-codes-table th,
 .nanoid-codes-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
 .nanoid-codes-table th {
-  background-color: #f4f4f4;
-  font-weight: bold;
+    background-color: #f4f4f4;
+    font-weight: bold;
 }
 
 .nanoid-codes-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }
 
 .nanoid-codes-table tr:hover {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
 
 /* Page with all users with cupom codes */
 .subscriptions-codes-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 .subscriptions-codes-table th,
 .subscriptions-codes-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
 .subscriptions-codes-table th {
-  background-color: #f4f4f4;
-  font-weight: bold;
+    background-color: #f4f4f4;
+    font-weight: bold;
 }
 
 .subscriptions-codes-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }
 
 .subscriptions-codes-table tr:hover {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
 
 /* Vouchers page */
 .vouchers-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 .vouchers-table th,
 .vouchers-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
 .vouchers-table th {
-  background-color: #f4f4f4;
-  font-weight: bold;
+    background-color: #f4f4f4;
+    font-weight: bold;
 }
 
 .vouchers-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }
 
 .vouchers-table tr:hover {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
