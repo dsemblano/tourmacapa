@@ -111,6 +111,14 @@ add_action('after_setup_theme', function () {
         'primary_navigation' => __('Primary Navigation', 'sage'),
     ]);
 
+    register_nav_menus([
+        'footer_navigation' => __('Footer Navigation', 'sage'),
+    ]);
+
+    register_nav_menus([
+        'primary-menu' => __('Primary Menu', 'sage'),
+    ]);
+
     /**
      * Disable the default block patterns.
      *

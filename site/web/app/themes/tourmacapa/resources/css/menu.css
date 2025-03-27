@@ -1,0 +1,173 @@
+
+#logo #logoname {
+    font-size: 6rem; /* text-8xl */
+    line-height: 1;
+    position: relative;
+    transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
+    transform: translate(0, 0); /* Add a transform effect */
+  }
+  
+  #logo.shrink #logoname {
+    font-size: 3rem; /* text-5xl */
+    line-height: 1;
+    top: 0.25rem; /* top-1 */
+    position: relative;
+    padding-top: 0.5rem; /* pt-2 */
+    padding-bottom: 1rem; /* pb-4 */
+    transform: translate(0, -20px); /* Add a transform effect */
+    transition: 0.2s;
+  }
+  
+  #logo.shrink #logosurnamepage {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 2.5rem;
+  }
+  
+  .menu-menu-principal-container {
+    background-color: black;
+    width: 100%;
+  }
+  
+  .menu-menu-principal-container ul#menu-menu-principal {
+    animation: slide-down 0.3s ease-out;
+  }
+  
+  .menu-menu-principal-container ul#menu-menu-principal li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .menu-menu-principal-container ul#menu-menu-principal .sub-menu {
+    background-color: black;
+    padding-left: 0.5rem; /* pl-2 */
+  }
+  
+  .menu-menu-principal-container ul#menu-menu-principal li > a:not(:last-child)::after {
+    content: " ▾";
+  }
+  
+  @media (min-width: 1024px) {
+    .menu-menu-principal-container {
+      box-shadow: none;
+    }
+    
+    .menu-menu-principal-container ul#menu-menu-principal li {
+      margin-bottom: 0;
+      position: relative;
+    }
+    
+    .menu-menu-principal-container ul#menu-menu-principal li a {
+      padding: 0.5rem; /* p-2 */
+    }
+    
+    .menu-menu-principal-container ul#menu-menu-principal li a:hover {
+      border-radius: 0.25rem; /* rounded */
+      opacity: 1;
+      background-color: gray;
+      text-decoration: none; /* no-underline */
+    }
+    
+    .menu-menu-principal-container ul#menu-menu-principal .sub-menu {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+      position: absolute;
+      z-index: 99999;
+      visibility: hidden;
+      opacity: 0;
+      width: 20rem;
+      inset: 0px auto auto 0px;
+      margin-top: 2.1rem;
+    }
+    
+    .menu-menu-principal-container ul#menu-menu-principal .sub-menu li {
+      padding-top: 0.5rem; /* py-2 */
+      padding-bottom: 0.5rem;
+    }
+    
+    .menu-menu-principal-container ul#menu-menu-principal li:hover > ul,
+    .menu-menu-principal-container ul#menu-menu-principal li:focus-within > ul,
+    .menu-menu-principal-container ul#menu-menu-principal li ul:hover,
+    .menu-menu-principal-container ul#menu-menu-principal li ul:focus {
+      animation: slide-down 0.3s ease-out;
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    .menu-menu-principal-container li {
+      position: relative;
+      transition-duration: 0.5s;
+    }
+    
+    .menu-menu-principal-container li ul li {
+      clear: both;
+      width: 100%;
+    }
+    
+    .menu-menu-principal-container li:focus-within a {
+      outline: none;
+    }
+    
+    .menu-menu-principal-container li:hover,
+    .menu-menu-principal-container li:focus-within {
+      cursor: pointer;
+    }
+  }
+  
+  @keyframes slide-down {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-5%);
+      transform: translateY(-5%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  
+  .submenu {
+    margin-top: 1rem;
+  }
+  
+  #menu-mobile {
+    padding: 3rem; /* p-12 */
+  }
+  
+  #menu-mobile li.menu-item:not(.menu-item-object-page, .menu-item-object-custom) {
+    margin-bottom: 3rem;
+  }
+  
+  .arrow {
+    margin-left: 0.5rem; /* ml-2 */
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+  
+  .menu-item-has-children > a[aria-expanded="true"] .arrow {
+    transform: rotate(180deg); /* rotate-180 */
+  }
+  
+  .menu-item-has-children {
+    position: relative;
+  }
+  
+  .submenu-toggle {
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: inherit;
+    padding: 0;
+  }
+  
+  .menu-open {
+    display: block;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
