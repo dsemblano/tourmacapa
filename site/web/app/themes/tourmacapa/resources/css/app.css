@@ -2,6 +2,7 @@
 @source "../views/";
 @source "../../app/";
 @import './fonts.css';
+@import 'animate.css';
 
 @theme {
   --color-primary: #FF4242;

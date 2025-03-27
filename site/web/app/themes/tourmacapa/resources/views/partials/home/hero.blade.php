@@ -7,7 +7,7 @@
                 src="{{ asset('resources/images/TucuFoodlogo.png') }}" alt="Tour Macapá página inicial" />
 
                 <span class="text-4xl inline-block bg-primaryColor font-bold p-2">Compre 1, Leve 2</span>
-                <h1 class="text-8xl hero-heading font-bold text-grayH">
+                <h1 class="text-8xl hero-heading font-bold text-grayH animate__animated animate__zoomInLeft">
                     Tour<br /> Macapá
                 </h1>
                 <p class="mt-7 text-3xl text-grayH">
