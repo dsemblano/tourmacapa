@@ -4,8 +4,8 @@
 @import './fonts.css';
 
 @theme {
-  --color-primary: #3490dc; 
-  --color-secondary: #ffed4a; 
+  --color-primary: #FF4242;
+  --color-secondary: #3490dc; 
   --color-accent: #9561e2;
   --font-sans: "Tanker Regular", sans-serif;
   --font-sans: "ibmplexsans", sans-serif;
@@ -42,6 +42,7 @@ ul#menu-menu-principal {
 h1,
 h2 {
     font-family: 'Tanker Regular', sans-serif;
+    color: var(--color-primary);
 }
 
 p {
