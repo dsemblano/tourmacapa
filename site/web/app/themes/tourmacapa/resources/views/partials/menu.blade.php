@@ -1,33 +1,41 @@
-<!-- Menu Overlay Mobile with the X button -->
-<div id="menu-overlay" class="animate__animated animate__fadeInDown animate__faster fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center opacity-0 invisible transition-opacity duration-300 z-50 hidden md:hidden">
-    <button id="menu-close" class="absolute top-9 right-10 text-white text-5xl focus:outline-none">&times;</button>
-    
-        
-    <?php
-    wp_nav_menu([
-        'theme_location' => 'primary-menu',
-        'container'      => false,
-        'menu_class'     => 'space-y-4 text-white text-2xl uppercase font-bold',
-        'walker'         => new \App\Menu\CustomWalker(),
-        'echo'           => true, // Since Blade handles the output
-    ]);
-    ?>
-    
-</div>
-        
-        
-        <!-- Menu Toggle Button -->
-        <button id="menu-toggle" class="lg:hidden mr-4 z-60 bg-transparent border-none focus:outline-none">
-            <div class="w-8 h-1 bg-white mb-2 transform transition-transform"></div>
-            <div class="w-8 h-1 bg-white mb-2 transform transition-transform"></div>
-            <div class="w-8 h-1 bg-white transform transition-transform"></div>
-        </button>
-
-        {{-- Menu desktop --}}
-        <div class="hidden justify-between items-center w-full lg:flex lg:order-1" id="mobile-menu-3">
-            {{-- <div class="relative mt-3 lg:hidden">
-                @include('partials/inputsearch')
-            </div> --}}
-            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'flex flex-col pl-4 py-2
-            tracking-widest w-full justify-evenly lg:flex-row lg:mt-0 nav text-white text-lg relative', 'echo' => false]) !!}
-        </div>
+<div x-data="{ mobileOpen: false }" class="lg:relative" x-cloak>
+    <!-- Toggle Button -->
+    <button
+      @click.stop="mobileOpen = !mobileOpen"
+      class="lg:hidden p-2 relative w-6 h-6"
+      :aria-expanded="mobileOpen"
+    >
+      <!-- Dynamic Icons -->
+      <svg x-show="!mobileOpen" class="absolute inset-0 w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg x-show="mobileOpen" class="absolute inset-0 w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  
+    <!-- Mobile Menu -->
+    <div
+      x-show="mobileOpen"
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      class="fixed inset-0 z-50 bg-white lg:hidden pt-16"
+      style="display: none"
+    >
+      <div class="container p-4">
+        @foreach ($primary_navigation as $item)
+          <a 
+            href="{{ $item->url }}" 
+            @click="mobileOpen = false"
+            class="block py-3 text-xl border-b border-gray-100"
+          >
+            {{ $item->label }}
+          </a>
+        @endforeach
+      </div>
+    </div>
+  </div>

@@ -2,6 +2,7 @@
 
 namespace App\View\Composers;
 
+use Log1x\Navi\Navi;
 use Roots\Acorn\View\Composer;
 
 class App extends Composer
@@ -25,6 +26,7 @@ class App extends Composer
         return [
             'siteName' => $this->siteName(),
             'descName' => $this->descName(),
+            'primary_navigation' => Navi::make()->build('primary_navigation')->toArray(),
         ];
     }
 

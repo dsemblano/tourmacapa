@@ -24,5 +24,10 @@ class ThemeServiceProvider extends SageServiceProvider
     public function boot()
     {
         parent::boot();
+        $this->app['view']->composer(
+            'partials.header', // Match the view(s) you specified
+            \App\View\Composers\NavigationComposer::class
+        );
+        
     }
 }

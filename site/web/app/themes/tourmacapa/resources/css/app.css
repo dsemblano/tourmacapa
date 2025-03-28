@@ -2,12 +2,12 @@
 @source "../views/";
 @source "../../app/";
 @import './fonts.css';
-@import './menu.css';
+/* @import './menu.css'; */
 @import 'animate.css';
-@import "flowbite/src/themes/default";
+/* @import "flowbite/src/themes/default"; */
 
-@plugin "flowbite/plugin";
-@source "../node_modules/flowbite";
+/* @plugin "flowbite/plugin";
+@source "../node_modules/flowbite"; */
 
 @theme {
   --color-primary: #FF4242;
@@ -287,3 +287,5 @@ p {
 .vouchers-table tr:hover {
     background-color: #f1f1f1;
 }
+
+[x-cloak] { display: none !important; }

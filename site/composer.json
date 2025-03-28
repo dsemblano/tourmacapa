@@ -43,7 +43,9 @@
     "wpackagist-theme/twentytwentyfive": "^1.0",
     "wpackagist-plugin/woocommerce":"^9.7.1",
     "wpackagist-plugin/yith-woocommerce-subscription":"^4.4.0",
-    "generoi/sage-woocommerce": "^1.1"
+    "generoi/sage-woocommerce": "^1.1",
+    "roots/acorn-prettify": "^1.0",
+    "log1x/navi": "^3.1"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
