@@ -13,15 +13,17 @@
           <h2 class="text-6xl font-bold text-grayH 2 mb-6">
             O que é o Tour Macapá?
           </h2>
-          <p class="my-4">
-            O Tour é um guia que reúne mais de 200 vouchers de benefícios em dobro para você aproveitar o melhor
-            da cidade ao lado de quem ama.
-          </p>
-          <p class="my-4">
-            Com ele, você e um acompanhante compram um prato e ganham outro nos estabelecimentos participantes.
-            Além da gastronomia, também temos vouchers que oferecem opções de lazer e experiências nos quais
-            você também pode aproveitar, somando mais de R$ 9 mil em economia.
-          </p>
+          <div class="hero-text text-center lg:text-left">
+            <p class="my-4">
+              O Tour é um guia que reúne mais de 200 vouchers de benefícios em dobro para você aproveitar o melhor
+              da cidade ao lado de quem ama.
+            </p>
+            <p class="my-4">
+              Com ele, você e um acompanhante compram um prato e ganham outro nos estabelecimentos participantes.
+              Além da gastronomia, também temos vouchers que oferecem opções de lazer e experiências nos quais
+              você também pode aproveitar, somando mais de R$ 9 mil em economia.
+            </p>
+          </div>
         </div>
         <picture class="hero-image w-full">
           <img src="{{ asset('resources/images/oquee.jpg') }}" width="600" height="600" alt="Hero image" />

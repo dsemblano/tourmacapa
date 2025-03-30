@@ -10,7 +10,7 @@
   --color-secondary: #3490dc; 
   --color-accent: #9561e2;
   --font-sans: "Tanker Regular", sans-serif;
-  --font-sans: "ibmplexsans", sans-serif;
+  /* --font-sans: "BespokeSerif", sans-serif; */
 }
 
 @layer utility {
@@ -50,8 +50,9 @@ h2 {
 p {
     @apply text-gray-700;
 
-    font-family: 'ibmplexsans', sans-serif;
-    font-size: 1.2rem;
+    font-family: 'BespokeSerif', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
 }
 
 .hero-image img { 
