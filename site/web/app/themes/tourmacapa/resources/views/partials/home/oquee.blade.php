@@ -1,18 +1,22 @@
-<section id="oquee" class="bg-slate-100 arrow-border">
+<section id="oquee" class="bg-slate-100 arrow-border py-6">
     <div class="container">
       <div class="flex flex-col lg:flex-row-reverse gap-12">
         <div class="hero w-full">
-          <img
+          {{-- <img
             id="logoname"
             class="hover:scale-110 transition duration-300 ease-in-out"
             width="100"
             height="90"
             src="{{ asset('resources/images/TucuFoodlogo.png')  }}"
             alt="Tour Macapá página inicial"
-          />
-          <h2 class="text-6xl font-bold text-grayH 2 mb-6">
-            O que é o Tour Macapá?
-          </h2>
+          /> --}}
+          <div class="flex flex-row gap-4 justify-items-start">
+            @include('partials.logo')
+            <h2 class="text-6xl font-bold text-grayH 2 mb-6 text-gray-800">
+              O que é o Tour Macapá?
+            </h2>
+          </div>
+
           <div class="hero-text text-center lg:text-left">
             <p class="my-4">
               O Tour é um guia que reúne mais de 200 vouchers de benefícios em dobro para você aproveitar o melhor

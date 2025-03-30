@@ -1,6 +1,6 @@
-<section id="comofunciona" class="">
+<section id="comofunciona" class="py-6">
     <div class="container">
-        <h2 class="text-6xl font-bold text-grayH 2 mb-6">Como funciona?</h2>
+        <h2 class="text-6xl font-bold text-grayH 2 mb-6 text-gray-800">Como funciona?</h2>
 
         <div class="flex flex-col lg:flex-row justify-center">
             <div class="w-full">

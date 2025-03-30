@@ -44,7 +44,7 @@ ul#menu-menu-principal {
 h1,
 h2 {
     font-family: 'Tanker Regular', sans-serif;
-    color: var(--color-primary);
+    /* color: var(--color-primary); */
 }
 
 p {
