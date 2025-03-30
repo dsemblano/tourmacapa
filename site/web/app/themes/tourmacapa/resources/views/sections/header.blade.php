@@ -1,6 +1,6 @@
 <header class="banner border-gray-100 border-b-2 ">
   <div class="container">
-    <div class="flex flex-row justify-between items-center gap-20 lg:justify-start lg:flex-wrap">
+    <div class="flex flex-row justify-between items-center gap-20 lg:justify-start lg:flex-wrap lg:text-2xl text-gray-800">
       <div class="logo">
           @include('partials.logo')
         {{-- <a class="brand" href="{{ home_url('/') }}">
