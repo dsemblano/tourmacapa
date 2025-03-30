@@ -1,8 +1,8 @@
 <section id="hero">
     {{-- {!! do_shortcode('[voucher_validation]') !!} --}}
     <div class="container">
-        <div class="flex flex-col lg:flex-row">
-            <div class="">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <div class="hero-left">
                 {{-- <img id="logoname" class="hover:scale-110 transition duration-300 ease-in-out animate__animated animate__heartBeat animate__fast animate__delay-2s" width="200" height="280"
                 src="{{ asset('resources/images/TucuFoodlogo.png') }}" alt="Tour Macapá página inicial" /> --}}
 

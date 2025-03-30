@@ -1,7 +1,7 @@
 <section id="oquee" class="bg-slate-100 arrow-border">
     <div class="container">
-      <div class="flex flex-col lg:flex-row-reverse">
-        <div class="hero w-full lg:w-1/2">
+      <div class="flex flex-col lg:flex-row-reverse gap-12">
+        <div class="hero w-full">
           <img
             id="logoname"
             class="hover:scale-110 transition duration-300 ease-in-out"
@@ -23,7 +23,7 @@
             você também pode aproveitar, somando mais de R$ 9 mil em economia.
           </p>
         </div>
-        <picture class="hero-image w-full lg:w-1/2">
+        <picture class="hero-image w-full">
           <img src="{{ asset('resources/images/oquee.jpg') }}" width="600" height="600" alt="Hero image" />
         </picture>
       </div>
