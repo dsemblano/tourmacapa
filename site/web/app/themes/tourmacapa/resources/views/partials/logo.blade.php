@@ -1,6 +1,21 @@
 <a class="brand relative" href="{{ home_url('/') }}">
-    <img id="logoname"
-        class="hover:scale-110 transition duration-300 ease-in-out animate__animated animate__heartBeat animate__fast animate__delay-2s"
-        width="60" height="50" src="{{ asset('resources/images/TucuFoodlogo.png') }}"
-        alt="Tour Macapá logo" />
+
+    <svg class="hover:scale-110 transition duration-300 ease-in-out animate__animated animate__heartBeat animate__fast animate__delay-2s"
+        version="1.0" xmlns="http://www.w3.org/2000/svg" width="60px" height="50px" viewBox="0 0 202.000000 252.000000"
+        preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(0.000000,252.000000) scale(0.100000,-0.100000)" fill="var(--color-primary)"
+            stroke="none">
+            <path d="M880 2505 c-8 -2 -49 -9 -90 -15 -115 -18 -177 -38 -308 -96 -96 -44
+    -234 -155 -300 -243 -205 -272 -214 -593 -25 -941 52 -95 266 -416 390 -585
+    203 -276 455 -610 461 -612 4 -1 47 53 97 120 49 67 173 234 274 371 465 631
+    583 846 616 1126 8 63 -8 201 -32 275 -100 318 -419 552 -811 594 -94 10 -235
+    13 -272 6z m538 -1140 l2 -710 -203 -274 c-112 -151 -207 -272 -212 -270 -5 2
+    -101 127 -212 277 l-203 273 0 710 0 709 413 -2 412 -3 3 -710z" />
+            <path d="M650 1960 l0 -60 355 0 355 0 0 60 0 60 -355 0 -355 0 0 -60z" />
+            <path d="M910 1816 c-101 -28 -184 -95 -231 -186 -20 -38 -24 -60 -24 -135 0
+    -78 4 -97 27 -140 30 -57 97 -124 155 -153 176 -90 405 -17 490 156 37 75 40
+    191 6 263 -71 156 -257 241 -423 195z" />
+        </g>
+    </svg>
+
 </a>
