@@ -1,4 +1,4 @@
-<section id="oquee" class="bg-slate-100 arrow-border py-6">
+<section id="oquee" class="bg-slate-100 lg:arrow-border py-6">
     <div class="container">
       <div class="flex flex-col lg:flex-row-reverse gap-12">
         <div class="hero w-full">
