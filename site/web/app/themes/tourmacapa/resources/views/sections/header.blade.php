@@ -1,4 +1,4 @@
-<header class="banner border-gray-100 border-b-2 ">
+<header class="banner border-gray-100 border-b-2 w-full z-50 bg-white fixed top-0 left-0 shadow">
   <div class="container">
     <div class="flex flex-row justify-between items-center gap-20 lg:justify-start lg:flex-wrap lg:text-2xl text-gray-800">
       <div class="logo">

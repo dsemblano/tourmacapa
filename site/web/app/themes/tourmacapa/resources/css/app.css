@@ -28,6 +28,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Menu */
 ul#menu-menu-principal {
     @apply flex flex-col lg:flex-row gap-x-8
