@@ -284,4 +284,8 @@ p {
     background-color: #f1f1f1;
 }
 
+:root :where(a:where(:not(.wp-element-button))) {
+  text-decoration: inherit;
+}
+
 [x-cloak] { display: none !important; }
