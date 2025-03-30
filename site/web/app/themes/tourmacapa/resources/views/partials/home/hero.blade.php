@@ -3,8 +3,8 @@
     <div class="container">
         <div class="flex flex-col lg:flex-row">
             <div class="">
-                <img id="logoname" class="hover:scale-110 transition duration-300 ease-in-out animate__animated animate__heartBeat animate__fast animate__delay-2s" width="200" height="280"
-                src="{{ asset('resources/images/TucuFoodlogo.png') }}" alt="Tour Macapá página inicial" />
+                {{-- <img id="logoname" class="hover:scale-110 transition duration-300 ease-in-out animate__animated animate__heartBeat animate__fast animate__delay-2s" width="200" height="280"
+                src="{{ asset('resources/images/TucuFoodlogo.png') }}" alt="Tour Macapá página inicial" /> --}}
 
                 <span class="text-4xl inline-block bg-primaryColor font-bold p-2 animate__animated animate__fadeInLeftBig animate__fast animate__delay-1s">Compre 1, Leve 2</span>
                 <h1 class="text-8xl hero-heading font-bold text-grayH animate__animated animate__zoomInLeft">

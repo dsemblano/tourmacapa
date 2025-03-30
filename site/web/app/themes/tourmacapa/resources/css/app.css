@@ -2,12 +2,8 @@
 @source "../views/";
 @source "../../app/";
 @import './fonts.css';
-/* @import './menu.css'; */
 @import 'animate.css';
-/* @import "flowbite/src/themes/default"; */
-
-/* @plugin "flowbite/plugin";
-@source "../node_modules/flowbite"; */
+/* @import './menu.css'; */
 
 @theme {
   --color-primary: #FF4242;

@@ -2,9 +2,7 @@
   <div class="container">
     <div class="flex flex-wrap lg:flex-nowrap py-4">
       <div class="logo">
-        @if (! is_home () && ! is_front_page())
           @include('partials.logo')
-        @endif
         {{-- <a class="brand" href="{{ home_url('/') }}">
           <span class="block">{!! $siteName !!}</span>
           <span>{!! $descName !!}</span>
