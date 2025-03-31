@@ -30,7 +30,7 @@
             </div>
     
             <picture class="hero-image">
-                <img src="{{ asset('resources/images/bogo-hero.webp') }}" width="600" height="600" alt="Hero image">
+                <img src="{{ asset('resources/images/bogo-hero.webp') }}" fetchpriority="high" width="600" height="600" alt="Hero image">
             </picture>
     
         </div>

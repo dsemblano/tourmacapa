@@ -1,4 +1,4 @@
-<section id="comofunciona" class="py-6">
+<section id="comofunciona" class="py-6 animate_scroll">
     <div class="container">
         <h2 class="text-6xl font-bold text-grayH 2 mb-6 text-gray-800">Como funciona?</h2>
 
