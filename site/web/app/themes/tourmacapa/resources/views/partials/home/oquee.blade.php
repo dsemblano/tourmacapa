@@ -1,4 +1,4 @@
-<section id="oquee" class="bg-slate-100 lg:arrow-border py-6 animate_scroll">
+<section id="oquee" class="bg-slate-100 lg:arrow-border py-6">
     <div class="container">
       <div class="flex flex-col lg:flex-row-reverse gap-12">
         <div class="hero w-full">
@@ -28,7 +28,7 @@
             </p>
           </div>
         </div>
-        <picture class="hero-image w-full">
+        <picture class="hero-image w-full animate_scroll">
           <img src="{{ asset('resources/images/oquee.jpg') }}" width="600" height="600" alt="Hero image" />
         </picture>
       </div>

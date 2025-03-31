@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Step 2: Apply Animate.css effect after a tiny delay
         setTimeout(() => {
-          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+          entry.target.classList.add('animate__animated', 'animate__fadeInLeft');
         }, 10); // Short delay ensures CSS transition applies
         
         observer.unobserve(entry.target);

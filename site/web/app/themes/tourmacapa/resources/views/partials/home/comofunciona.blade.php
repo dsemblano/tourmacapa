@@ -1,8 +1,8 @@
-<section id="comofunciona" class="py-6 animate_scroll">
+<section id="comofunciona" class="py-6">
     <div class="container">
         <h2 class="text-6xl font-bold text-grayH 2 mb-6 text-gray-800">Como funciona?</h2>
 
-        <div class="flex flex-col lg:flex-row justify-center">
+        <div class="flex flex-col lg:flex-row justify-center animate_scroll">
             <div class="w-full">
                 <div class="single_services text-center mt-8 mx-3">
                     <picture class="services_icon">
