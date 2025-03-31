@@ -20,6 +20,12 @@
                         Vouchers e promoções para os melhores estabelecimentos do Amapá!
                     </p>
                 </div>
+
+                <button class="bg-primary hover:bg-gray-400 text-white text-3xl font-bold mt-8 py-4 px-6 rounded inline-flex items-center">
+                    @include('partials/icons.voucher')
+                    <span class="pl-6">Assine já!</span>
+                  </button>
+
             </div>
     
             <picture class="hero-image">

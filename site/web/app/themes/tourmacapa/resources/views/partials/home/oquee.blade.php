@@ -11,7 +11,6 @@
             alt="Tour Macapá página inicial"
           /> --}}
           <div class="flex flex-row gap-4 justify-items-start">
-            @include('partials.logo')
             <h2 class="text-6xl font-bold text-grayH 2 mb-6 text-gray-800">
               O que é o Tour Macapá?
             </h2>
