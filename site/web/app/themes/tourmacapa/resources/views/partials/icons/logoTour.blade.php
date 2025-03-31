@@ -1,5 +1,5 @@
 <svg role="img"
-    class="hover:scale-110 transition duration-300 ease-in-out animate__animated animate__heartBeat animate__fast animate__delay-2s"
+    class="hover:scale-110 transition duration-300 ease-in-out"
     version="1.0" xmlns="http://www.w3.org/2000/svg" width="60px" height="50px" viewBox="0 0 202.000000 252.000000"
     preserveAspectRatio="xMidYMid meet">
     <title>Tour Macapá - Compre 1, Leve 2!</title>

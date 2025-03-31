@@ -21,7 +21,7 @@
                     </p>
                 </div>
 
-                <button class="bg-primary hover:bg-gray-400 text-white text-3xl font-bold mt-8 py-4 px-6 rounded inline-flex items-center">
+                <button class="bg-primary animate__animated animate__heartBeat animate__fast animate__delay-2s hover:bg-gray-400 text-white text-3xl font-bold mt-8 py-4 px-6 rounded inline-flex items-center">
                     @include('partials/icons.voucher')
                     <span class="pl-6">Assine já!</span>
                   </button>
