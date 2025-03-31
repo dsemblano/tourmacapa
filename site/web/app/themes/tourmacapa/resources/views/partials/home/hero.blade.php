@@ -6,8 +6,8 @@
                 {{-- <img id="logoname" class="hover:scale-110 transition duration-300 ease-in-out animate__animated animate__heartBeat animate__fast animate__delay-2s" width="200" height="280"
                 src="{{ asset('resources/images/TucuFoodlogo.png') }}" alt="Tour Macapá página inicial" /> --}}
 
-                <span class="bg-primary text-white font-sans text-4xl inline-block px-6 py-2 animate__animated animate__fadeInLeftBig">
-                    Compre 1, Leve 2!
+                <span class="bg-primary text-white font-sans text-xl inline-block px-6 py-2 animate__animated animate__fadeInLeftBig">
+                    Compre 1, Leve 2
                 </span>
                 <h1 class="mt-4 text-8xl hero-heading font-bold text-grayH animate__animated animate__zoomInLeft  animate__fast text-gray-800">
                     Tour<br /> Macapá
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="text-center lg:text-left">
-                    <button class="bg-primary animate__animated animate__heartBeat animate__fast animate__delay-2s hover:bg-gray-400 text-white text-3xl font-bold mt-8 py-4 px-6 rounded inline-flex items-center">
+                    <button class="bg-primary animate__animated animate__heartBeat animate__fast animate__delay-2s hover:bg-gray-400 text-white text-4xl font-bold mt-8 py-4 px-6 rounded-lg inline-flex items-center">
                         @include('partials/icons.voucher')
                         <span class="pl-6">Assine já!</span>
                     </button>
