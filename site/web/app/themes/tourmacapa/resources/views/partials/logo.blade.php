@@ -2,7 +2,7 @@
 
 <div id="logo" class="flex flex-row items-center">
 
-    @include('partials/icons.logoTour')
+    @include('partials/icons.logoTour', ['width' => '60px', 'height' => '50px'])
     <div id="logo_tour" class="flex flex-col relative top-1">
         <span class="text-base relative">Tour</span>
         <span class="text-base relative bottom-1.5">Macapá</span>
