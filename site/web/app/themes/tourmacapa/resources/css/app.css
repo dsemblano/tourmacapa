@@ -279,9 +279,9 @@ p {
 }
 
 .acf-input {
-  @apply border-1 border-primary rounded font-p w-1/2;
+  @apply border-1 border-primary rounded font-p w-full lg:w-1/2;
 }
 
 .acf-label {
-  @apply font-p
+  @apply font-p;
 }
