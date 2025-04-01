@@ -16,7 +16,7 @@
                     'post_id' => 'new_post', // Save as new post
                     'post_title' => true, // Required for WordPress (even if hidden)
                     'post_content' => false,
-                    'fields' => ['field_67eb5b4d107f4', 'field_67eb5b78107f5', 'field_67eb5b9c107f6', 'field_67eb5bb6107f7'],
+                    'fields' => ['field_67eb5b4d107f4', 'field_67eb5b78107f5', 'field_67eb5b9c107f6', 'field_67eb5bb6107f7', 'field_67eb73cdfff71'],
                     'submit_value'  => 'Enviar',
                     'new_post' => [
                         'post_type'   => 'cadastro-loja',
@@ -32,7 +32,7 @@
                     
                 ]);
             ?>
-            <button type="submit" class="acf-button">Enviar</button>
+            <button type="submit" class="acf-button bg-primary hover:bg-gray-400 text-white text-xl mt-8 py-4 px-4 rounded-lg inline-flex items-center">Enviar</button>
             </form>
             <div id="form-response" style="display:none;"></div>
         </div>

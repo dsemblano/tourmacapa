@@ -10,7 +10,7 @@
   --color-secondary: #3490dc; 
   --color-accent: #9561e2;
   --font-sans: "Tanker Regular", sans-serif;
-  /* --font-sans: "BespokeSerif", sans-serif; */
+  --font-p: "BespokeSerif", sans-serif;
 }
 
 @layer utility {
@@ -259,7 +259,7 @@ p {
 
 [x-cloak] { display: none !important; }
 
-/* Form messages */
+/* ACF Form */
 #form-response {
   margin: 20px 0;
   padding: 15px;
@@ -276,4 +276,12 @@ p {
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
+}
+
+.acf-input {
+  @apply border-1 border-primary rounded font-p w-1/2;
+}
+
+.acf-label {
+  @apply font-p
 }
