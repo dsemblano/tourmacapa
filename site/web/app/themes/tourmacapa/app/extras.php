@@ -16,7 +16,7 @@ add_action('acf/save_post', function($post_id) {
       ));
     }
   }, 20); // Priority 20 ensures ACF fields are saved first
-
+  
   add_action('wp_ajax_submit_loja_form', 'handle_loja_form_submission');
 add_action('wp_ajax_nopriv_submit_loja_form', 'handle_loja_form_submission');
 
@@ -27,8 +27,8 @@ function handle_loja_form_submission() {
   }
 
   // Get nome_estabelecimento value first
-  $nome_estabelecimento = isset($_POST['acf']['field_67eb5b4d107f4']) 
-    ? sanitize_text_field($_POST['acf']['field_67eb5b4d107f4']) 
+  $nome_estabelecimento = isset($_POST['acf']['field_123abc']) 
+    ? sanitize_text_field($_POST['acf']['field_123abc']) 
     : 'Sem Nome'; // Fallback if empty
 
   // Create post WITH the correct title immediately

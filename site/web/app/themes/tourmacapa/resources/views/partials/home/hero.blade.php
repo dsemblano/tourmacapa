@@ -21,11 +21,22 @@
                     </p>
                 </div>
 
-                <div class="text-center lg:text-left">
-                    <button class="bg-primary animate__animated animate__heartBeat animate__fast animate__delay-2s hover:bg-gray-400 text-white text-4xl font-bold mt-8 py-4 px-6 rounded-lg inline-flex items-center">
+                <div class="flex flex-col lg:flex-row gap-12 text-center lg:text-left mt-8">
+                    
+                    <button class="cursor-pointer bg-primary animate__animated animate__heartBeat animate__fast animate__delay-2s hover:bg-gray-400 text-white text-4xl py-4 px-6 rounded-lg inline-flex items-center">
                         @include('partials/icons.voucher')
                         <span class="pl-6">Assine já!</span>
                     </button>
+
+                    
+                    <button class="cursor-pointer bg-secondary hover:bg-accent text-white text-4xl font-bold py-4 px-6 rounded-lg inline-flex items-center">
+                        <a href="/cadastro-loja">
+                            <span class="pl-6">Cadastro loja</span>
+                        </a>
+                    </button>
+                    
+                    
+
                 </div>
             </div>
     
