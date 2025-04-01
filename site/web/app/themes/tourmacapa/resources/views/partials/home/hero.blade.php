@@ -9,9 +9,12 @@
                 <span class="bg-primary text-white font-sans text-xl inline-block px-6 py-2 animate__animated animate__fadeInLeftBig">
                     Compre 1, Leve 2
                 </span>
-                <h1 class="mt-4 text-8xl hero-heading font-bold text-grayH animate__animated animate__zoomInLeft  animate__fast text-gray-800">
-                    Tour<br /> Macapá
-                </h1>
+                <div class="flex flex-row">
+                    <h1 class="mt-4 text-8xl hero-heading font-bold text-grayH animate__animated animate__zoomInLeft  animate__fast text-gray-800">
+                        Tour<br /> <span class="flex flex-row"> Macapá @include('partials/icons.logoTour')</span>
+                    </h1>
+                </div>
+                
                 <div class="hero-text text-center lg:text-left">
                     <p class="mt-7 text-3xl text-grayH">
                         Os melhores estabelecimentos da cidade e região!
