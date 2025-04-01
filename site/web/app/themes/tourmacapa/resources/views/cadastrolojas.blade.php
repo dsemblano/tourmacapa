@@ -3,6 +3,10 @@
   Template Name: Cadastro lojas
 --}}
 
+@extends('layouts.app')
+
+@section('content')
+
 <?php 
 acf_form(array(
   'post_id'       => 'new_post', // Save as new post
@@ -16,3 +20,5 @@ acf_form(array(
   ),
 ));
 ?>
+
+@endsection
