@@ -1,6 +1,6 @@
 
 {{--
-  Template Name: Home Template
+  Template Name: Cadastro lojas
 --}}
 
 <?php 
