@@ -15,7 +15,7 @@
                         <h1
                         class="mt-4 text-7xl lg:text-8xl hero-heading font-bold text-grayH animate__animated animate__zoomInLeft  animate__fast text-gray-800">
                         Tour<br /> 
-                        <span class="flex flex-row"> Macapá @include('partials/icons.logoTour', ['class' => 'relative lg:bottom-0 ', 'width' => '6rem', 'height' => '6rem'])</span>
+                        <span class="flex flex-row"> Macapá @include('partials/icons.logoTour', ['class' => 'relative bottom-8 lg:bottom-0 ', 'width' => '6rem', 'height' => '6rem'])</span>
                         </h1>
                     </div>
                     
