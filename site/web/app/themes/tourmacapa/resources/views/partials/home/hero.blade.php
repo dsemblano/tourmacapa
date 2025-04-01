@@ -11,10 +11,14 @@
                     Compre 1, Leve 2
                 </span>
                 <div class="flex flex-row">
-                    <h1
-                        class="mt-4 text-8xl hero-heading font-bold text-grayH animate__animated animate__zoomInLeft  animate__fast text-gray-800">
-                        Tour<br /> <span class="flex flex-row"> Macapá @include('partials/icons.logoTour', ['class' => 'relative lg:bottom-0 ', 'width' => '6rem', 'height' => '6rem'])</span>
-                    </h1>
+                    <div class="w-full">
+                        <h1
+                        class="mt-4 text-7xl lg:text-8xl hero-heading font-bold text-grayH animate__animated animate__zoomInLeft  animate__fast text-gray-800">
+                        Tour<br /> 
+                        <span class="flex flex-row"> Macapá @include('partials/icons.logoTour', ['class' => 'relative lg:bottom-0 ', 'width' => '6rem', 'height' => '6rem'])</span>
+                        </h1>
+                    </div>
+                    
                 </div>
 
                 <div class="hero-text text-center lg:text-left">
