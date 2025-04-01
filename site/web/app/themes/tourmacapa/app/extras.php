@@ -1,5 +1,57 @@
 <?php
 
+// Update post title with ACF field value
+add_action('acf/save_post', function($post_id) {
+    // Only apply to "cadastro-loja" posts
+    if (get_post_type($post_id) !== 'cadastro-loja') return;
+  
+    // Get the submitted "nome_estabelecimento" value
+    $nome_estabelecimento = get_field('nome_estabelecimento', $post_id);
+  
+    if (!empty($nome_estabelecimento)) {
+      // Update the post title
+      wp_update_post(array(
+        'ID' => $post_id,
+        'post_title' => sanitize_text_field($nome_estabelecimento)
+      ));
+    }
+  }, 20); // Priority 20 ensures ACF fields are saved first
+
+  add_action('wp_ajax_submit_loja_form', 'handle_loja_form_submission');
+add_action('wp_ajax_nopriv_submit_loja_form', 'handle_loja_form_submission');
+
+function handle_loja_form_submission() {
+  // Verify nonce
+  if (!isset($_POST['acf_nonce']) || !wp_verify_nonce($_POST['acf_nonce'], 'acf_nonce')) {
+    wp_send_json_error('Invalid nonce');
+  }
+
+  // Get nome_estabelecimento value first
+  $nome_estabelecimento = isset($_POST['acf']['field_67eb5b4d107f4']) 
+    ? sanitize_text_field($_POST['acf']['field_67eb5b4d107f4']) 
+    : 'Sem Nome'; // Fallback if empty
+
+  // Create post WITH the correct title immediately
+  $post_id = wp_insert_post([
+    'post_type'    => 'cadastro-loja',
+    'post_status'  => 'publish',
+    'post_title'   => $nome_estabelecimento, // Set title here instead of later
+  ]);
+
+  if (is_wp_error($post_id)) {
+    wp_send_json_error('Falha ao criar cadastro');
+  }
+
+  // Save ACF fields
+  if (isset($_POST['acf'])) {
+    foreach ($_POST['acf'] as $key => $value) {
+      update_field($key, $value, $post_id);
+    }
+  }
+
+  wp_send_json_success();
+}
+
 // Creating nanoid tables
 function create_nanoid_codes_table() {
     global $wpdb;
