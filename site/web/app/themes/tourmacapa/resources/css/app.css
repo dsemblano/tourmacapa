@@ -6,9 +6,10 @@
 /* @import './menu.css'; */
 
 @theme {
-  --color-primary: #FF4242;
+  --color-primary: #D04A45;
   --color-secondary: #3490dc; 
   --color-accent: #9561e2;
+  --color-p: #363B4C;
   --font-sans: "Tanker Regular", sans-serif;
   --font-p: "BespokeSerif", sans-serif;
 }
@@ -45,7 +46,7 @@ h2 {
 }
 
 p {
-    @apply text-gray-800;
+    @apply text-p;
 
     font-family: 'BespokeSerif', sans-serif;
     font-weight: 400;

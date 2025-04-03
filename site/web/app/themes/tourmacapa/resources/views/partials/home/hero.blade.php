@@ -13,7 +13,7 @@
                 <div class="flex flex-row">
                     <div class="w-full">
                         <h1
-                        class="mt-4 text-7xl lg:text-8xl hero-heading font-bold text-grayH animate__animated animate__zoomInLeft  animate__fast text-gray-800">
+                        class="mt-4 text-7xl lg:text-8xl hero-heading font-bold text-grayH animate__animated animate__zoomInLeft  animate__fast text-p">
                         Tour<br /> 
                         <span class="flex flex-row"> Macapá @include('partials/icons.logoTour', ['class' => 'relative bottom-8 lg:bottom-0 ', 'width' => '6rem', 'height' => '6rem'])</span>
                         </h1>

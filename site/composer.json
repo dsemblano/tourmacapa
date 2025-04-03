@@ -50,7 +50,8 @@
     "generoi/sage-woocommerce": "^1.1",
     "roots/acorn-prettify": "^1.0",
     "log1x/navi": "^3.1",
-    "wpengine/advanced-custom-fields-pro": "^6.3"
+    "wpengine/advanced-custom-fields-pro": "^6.3",
+    "chillerlan/php-qrcode": "^5.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",

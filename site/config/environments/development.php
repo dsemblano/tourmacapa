@@ -15,6 +15,8 @@ Config::define('WP_DEBUG_LOG', env('WP_DEBUG_LOG') ?? true);
 Config::define('WP_DISABLE_FATAL_ERROR_HANDLER', true);
 Config::define('SCRIPT_DEBUG', true);
 Config::define('DISALLOW_INDEXING', true);
+Config::define('YITH_YWSBS_TEST_ON', true); // Enable test mode
+Config::define('YITH_YWSBS_SAVE_LOG', true); // Enable debug logs
 
 ini_set('display_errors', '1');
 
