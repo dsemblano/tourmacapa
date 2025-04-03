@@ -1,7 +1,7 @@
 @props([
   'name' => null,
-  'inactive' => 'hover:text-blue-500',
-  'active' => 'text-blue-500',
+  'inactive' => 'hover:text-red-500',
+  'active' => 'text-red-500',
 ])
 
 @php($menu = Navi::build($name))

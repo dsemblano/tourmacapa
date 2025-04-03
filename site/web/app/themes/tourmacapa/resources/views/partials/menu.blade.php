@@ -4,7 +4,7 @@
     @foreach ($primary_navigation as $item)
       <a 
         href="{{ $item->url }}" 
-        class="hover:text-blue-500 transition-colors"
+        class="hover:text-primary transition-colors"
       >
         {{ $item->label }}
       </a>
