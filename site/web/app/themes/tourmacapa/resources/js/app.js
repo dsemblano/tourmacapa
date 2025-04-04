@@ -1,6 +1,5 @@
 import Alpine from 'alpinejs'
-import focus from '@alpinejs/focus';
-import { nanoid } from 'nanoid';
+import focus from '@alpinejs/focus' // For better accessibility
 
 // Initialize Alpine
 window.Alpine = Alpine
@@ -32,11 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 });
-
-// Generate coupon preview
-const generatePreviewCode = () => {
-  return 'BOGO-' + nanoid(8).toUpperCase();
-};
 
 import.meta.glob([
   '../images/**',
