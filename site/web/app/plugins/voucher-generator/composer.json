@@ -1,0 +1,14 @@
+{
+  "name": "tourmacapa/voucher-generator",
+  "description": "Plugin que gera vouchers com QR code",
+  "type": "wordpress-plugin",
+  "require": {
+    "endroid/qr-code": "^5.0",
+    "hidehalo/nanoid-php": "^2.0"
+  },
+  "autoload": {
+        "psr-4": {
+            "Endroid\\QrCode\\": "vendor/endroid/qr-code/src"
+        }
+  }
+}
