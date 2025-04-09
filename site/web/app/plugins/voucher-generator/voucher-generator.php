@@ -212,6 +212,7 @@ add_shortcode('user_vouchers', function ($atts) {
             $redeemed = get_post_meta($voucher->ID, 'redeemed', true);
             $qr       = get_post_meta($voucher->ID, 'qr_code_url', true);
             $created  = get_the_date('d/m/Y', $voucher);
+            $hour = get_the_time('', $voucher->ID);
             $status   = $redeemed
             ? '<span style="color:green; font-weight:bold;">✔ Usado</span>'
             : '<span style="color:red; font-weight:bold;">Disponível</span>';
@@ -220,6 +221,7 @@ add_shortcode('user_vouchers', function ($atts) {
             echo '<p><strong>Código:</strong> ' . esc_html($code) . '</p>';
             echo '<p><strong>Status:</strong> ' . $status . '</p>';
             echo '<p><strong>Data:</strong> ' . esc_html($created) . '</p>';
+            echo '<p><strong>Hora:</strong> ' . esc_html($hour) . '</p>';
             if ($qr) {
                 echo '<img src="' . esc_url($qr) . '" alt="QR Code" style="width:100px; margin-top:10px;">';
             } else {
