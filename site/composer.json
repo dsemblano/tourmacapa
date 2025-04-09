@@ -47,11 +47,14 @@
     "wpackagist-theme/twentytwentyfive": "^1.0",
     "wpackagist-plugin/woocommerce":"^9.7.1",
     "wpackagist-plugin/yith-woocommerce-subscription":"^4.4.0",
-    "generoi/sage-woocommerce": "^1.1",
     "roots/acorn-prettify": "^1.0",
     "log1x/navi": "^3.1",
     "wpengine/advanced-custom-fields-pro": "^6.3",
-    "chillerlan/php-qrcode": "^5.0"
+    "hidehalo/nanoid-php": "^2.0",
+    "wpackagist-plugin/wp-phpmyadmin-extension":"^5.2.1.13",
+    "endroid/qr-code": "^5.0",
+    "wpackagist-plugin/checkoutwc-lite":"^1.1.13",
+    "generoi/sage-woocommerce": "^1.1"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",

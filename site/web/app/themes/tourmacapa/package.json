@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "nanoid": "^5.1.5"
+    "qr-scanner": "^1.4.2"
   }
 }

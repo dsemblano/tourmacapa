@@ -1,0 +1,8 @@
+{
+  "entries": {
+    "scripts/voucher-redemption": {
+      "js": ["../../resources/js/voucher-redemption.js"],
+      "css": ["../../resources/css/vouchers.css"]
+    }
+  }
+}
