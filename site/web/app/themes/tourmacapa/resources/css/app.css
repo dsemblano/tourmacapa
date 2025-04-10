@@ -9,9 +9,10 @@
 
 @theme {
   --color-primary: #D04A45;
-  --color-secondary: #3490dc; 
+  --color-secondary: #309237; 
   --color-accent: #9561e2;
   --color-p: #363B4C;
+  --font-heading: "Tanker Regular", sans-serif;
   --font-sans: "BespokeSerif", sans-serif;
   --font-p: "BespokeSerif", sans-serif;
 }
