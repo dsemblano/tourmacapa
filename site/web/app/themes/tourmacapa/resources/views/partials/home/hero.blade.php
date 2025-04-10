@@ -26,7 +26,7 @@
                         Os melhores estabelecimentos da cidade e região!
                     </p>
                     <p class="mt-7 text-3xl text-grayH">
-                        Vouchers e promoções para os melhores estabelecimentos do Amapá!
+                        Vouchers cupons Compre 1 Leve outro e promoções para os melhores estabelecimentos do Amapá!
                     </p>
                 </div>
 
