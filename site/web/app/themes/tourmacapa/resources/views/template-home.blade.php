@@ -9,7 +9,7 @@
     {{-- @include('partials.page-header') --}}
     @include('partials/home.hero')
     @include('partials/home.oquee')
-    @include('partials/home.comofunciona')
+    {{-- @include('partials/home.comofunciona') --}}
     @include('partials/home.planos')
     @include('partials/home.faq')
 
