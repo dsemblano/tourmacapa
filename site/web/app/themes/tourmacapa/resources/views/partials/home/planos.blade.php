@@ -35,7 +35,7 @@
                 </div>
             </div>
             <picture class="hero-image w-full animate_scroll">
-                <img src="{{ asset('resources/images/BOGOcompreumleveoutro.png') }}" width="600" height="600" alt="Hero image" />
+                <img src="{{ asset('resources/images/BOGOcompreumleveoutro.webp') }}" width="600" height="600" alt="Hero image" />
             </picture>
         </div>
     </div>
