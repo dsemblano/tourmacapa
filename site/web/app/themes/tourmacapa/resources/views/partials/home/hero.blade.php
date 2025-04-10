@@ -8,7 +8,7 @@
 
                 <span
                     class="bg-primary text-white font-sans text-xl inline-block px-6 py-2 animate__animated animate__fadeInLeftBig">
-                    Compre 1, Leve 2
+                    Cupons vouchers
                 </span>
                 <div class="flex flex-row">
                     <div class="w-full">
@@ -36,7 +36,7 @@
                         class="cursor-pointer bg-secondary animate__animated animate__heartBeat animate__fast animate__delay-2s hover:bg-gray-400 py-2 px-4 rounded-lg inline-flex items-center text-center justify-center">
                         @include('partials/icons.voucher')
                         <a href="/product/vouchers-preco-unico/">
-                            <span class="pl-6 text-white text-2xl tracking-wider font-heading">Comprar</span>
+                            <span class="pl-6 text-white text-2xl tracking-wider font-heading">Compre 1, Leve 2!</span>
                         </a>
                     </button>
 
