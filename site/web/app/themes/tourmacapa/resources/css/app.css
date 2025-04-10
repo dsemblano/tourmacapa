@@ -43,6 +43,7 @@ ul#menu-menu-principal {
 
 /* Texts */
 .home h1,
+#logo_tour,
 .home h2 {
     font-family: 'Tanker Regular', sans-serif;
     /* color: var(--color-primary); */
