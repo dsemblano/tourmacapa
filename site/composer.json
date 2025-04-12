@@ -55,6 +55,7 @@
     "endroid/qr-code": "^5.0",
     "wpackagist-plugin/checkoutwc-lite":"^1.1.13",
     "wpackagist-plugin/wp-import-export-lite":"^3.9.27",
+    "wpackagist-plugin/wp-mail-smtp": ">=3.10.0",
     "generoi/sage-woocommerce": "^1.1"
   },
   "require-dev": {
