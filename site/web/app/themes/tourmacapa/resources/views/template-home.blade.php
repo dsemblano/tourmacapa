@@ -12,8 +12,6 @@
     {{-- @include('partials/home.comofunciona') --}}
     @include('partials/home.planos')
     @include('partials/home.faq')
-
-    {!! do_shortcode('[list_users_with_voucher_links]') !!}
     @include('partials.content-page')
   @endwhile
 @endsection
