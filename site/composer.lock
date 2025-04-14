@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e07173150d54eb14536b34a845e9cbe7",
+    "content-hash": "8954b116af560e894e9f249a7301a305",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -7174,21 +7174,39 @@
         },
         {
             "name": "wpackagist-plugin/checkoutwc-lite",
-            "version": "1.1.13",
+            "version": "10.1.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/checkoutwc-lite/",
-                "reference": "tags/1.1.13"
+                "reference": "tags/10.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/checkoutwc-lite.1.1.13.zip"
+                "url": "https://downloads.wordpress.org/plugin/checkoutwc-lite.10.1.4.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/checkoutwc-lite/"
+        },
+        {
+            "name": "wpackagist-plugin/woo-variation-swatches",
+            "version": "2.2.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woo-variation-swatches/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woo-variation-swatches.zip?timestamp=1739706228"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woo-variation-swatches/"
         },
         {
             "name": "wpackagist-plugin/woocommerce",
@@ -7228,15 +7246,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "4.4.0",
+            "version": "3.11.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/4.4.0"
+                "reference": "tags/3.11.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.4.4.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.3.11.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -7388,12 +7406,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "9a519dd30df3313d2ee076579ea69a289b0a26a3"
+                "reference": "79df35d3a122bdf407423ec09377f60875fe88da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/9a519dd30df3313d2ee076579ea69a289b0a26a3",
-                "reference": "9a519dd30df3313d2ee076579ea69a289b0a26a3",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/79df35d3a122bdf407423ec09377f60875fe88da",
+                "reference": "79df35d3a122bdf407423ec09377f60875fe88da",
                 "shasum": ""
             },
             "conflict": {
@@ -7650,6 +7668,7 @@
                 "gaoming13/wechat-php-sdk": "<=1.10.2",
                 "genix/cms": "<=1.1.11",
                 "georgringer/news": "<1.3.3",
+                "geshi/geshi": "<1.0.8.11-dev",
                 "getformwork/formwork": "<1.13.1|>=2.0.0.0-beta1,<2.0.0.0-beta4",
                 "getgrav/grav": "<1.7.46",
                 "getkirby/cms": "<=3.6.6.5|>=3.7,<=3.7.5.4|>=3.8,<=3.8.4.3|>=3.9,<=3.9.8.1|>=3.10,<=3.10.1|>=4,<=4.3",
@@ -8299,7 +8318,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-04-12T04:06:04+00:00"
+            "time": "2025-04-14T17:05:11+00:00"
         }
     ],
     "aliases": [],

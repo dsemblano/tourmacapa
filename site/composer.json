@@ -53,9 +53,10 @@
     "hidehalo/nanoid-php": "^2.0",
     "wpackagist-plugin/wp-phpmyadmin-extension":"^5.2.1.13",
     "endroid/qr-code": "^5.0",
-    "wpackagist-plugin/checkoutwc-lite":"^1.1.13",
+    "wpackagist-plugin/checkoutwc-lite":"^10.1.4",
     "wpackagist-plugin/wp-import-export-lite":"^3.9.27",
-    "wpackagist-plugin/wp-mail-smtp": ">=3.10.0",
+    "wpackagist-plugin/wp-mail-smtp": "^3.10.0",
+    "wpackagist-plugin/woo-variation-swatches":"^2.2.0",
     "generoi/sage-woocommerce": "^1.1"
   },
   "require-dev": {
