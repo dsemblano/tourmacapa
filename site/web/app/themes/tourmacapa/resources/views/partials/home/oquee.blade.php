@@ -26,7 +26,7 @@
                         ainda está economizando.
                     </p>
 
-                    <p class="my-4">  c
+                    <p class="my-4">
                         Ao adquirir o Tour, você tem acesso a todos os vouchers de utilização
                         única e pode aproveitar nos estabelecimentos parceiros. Basta ir ao
                         local, nos dias e horários de aceitação do benefício, e aproveitar com

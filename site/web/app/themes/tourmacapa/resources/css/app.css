@@ -13,8 +13,8 @@
   --color-accent: #9561e2;
   --color-p: #363B4C;
   --font-heading: "Tanker Regular", sans-serif;
-  --font-sans: "BespokeSerif", sans-serif;
-  --font-p: "BespokeSerif", sans-serif;
+  --font-sans: "LatoRegular", sans-serif;
+  --font-p: "LatoRegular", sans-serif;
 }
 
 @layer utility {
@@ -51,9 +51,8 @@ ul#menu-menu-principal {
 
 h3,
 p {
-    @apply text-p;
+    @apply text-p font-p;
 
-    font-family: 'BespokeSerif', sans-serif;
     font-weight: 400;
     font-size: 1.3rem;
 }
