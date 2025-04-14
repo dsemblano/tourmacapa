@@ -3,7 +3,7 @@
         <div class="flex flex-col-reverse lg:flex-row-reverse gap-12">
             <div class="hero w-full">
                 <div class="flex flex-row gap-4 justify-items-start">
-                    <h2 class="text-6xl font-bold text-grayH 2 mb-6 text-p">
+                    <h2 class="text-4xl lg:text-6xl font-bold text-grayH 2 mb-6 text-p">
                         Planos
                     </h2>
                 </div>
