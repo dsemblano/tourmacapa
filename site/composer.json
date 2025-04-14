@@ -57,6 +57,7 @@
     "wpackagist-plugin/wp-import-export-lite":"^3.9.27",
     "wpackagist-plugin/wp-mail-smtp": "^3.10.0",
     "wpackagist-plugin/woo-variation-swatches":"^2.2.0",
+    "wpackagist-plugin/force-regenerate-thumbnails":"^2.2.1",
     "generoi/sage-woocommerce": "^1.1"
   },
   "require-dev": {

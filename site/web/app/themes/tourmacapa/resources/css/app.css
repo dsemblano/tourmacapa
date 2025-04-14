@@ -337,6 +337,11 @@ p {
   @apply bg-red-600;
 } */
 
+.woocommerce-product-gallery__image a {
+  pointer-events: none;
+
+}
+
 /* Exemplo básico de customização do carrinho */
 .woocommerce-cart .cart_totals {
   background-color: #f9f9f9;
@@ -363,4 +368,9 @@ p {
 
 .wc-block-cart {
   @apply !container;
+}
+
+.site-main,
+.checkout-page {
+  @apply mt-20 lg:pt-6;
 }

@@ -12,16 +12,22 @@
   <body @php(body_class())>
     @php(wp_body_open())
 
-    <div id="app">
+    <div id="app" class="{{ is_checkout() ? "checkout-page" : "" }}">
       <a class="sr-only focus:not-sr-only" href="#main">
         {{ __('Skip to content', 'sage') }}
       </a>
 
       @include('sections.header')
 
-      <main id="main" class="main mt-24 lg:pt-6">
+      @if (!is_woocommerce() && !is_cart() && !is_checkout())
+        <main id="main" class="main site-main">
+          @yield('content')
+        </main>
+      @else
+      <div class="container">
         @yield('content')
-      </main>
+      </div>
+      @endif
 
       @hasSection('sidebar')
         <aside class="sidebar">
