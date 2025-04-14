@@ -12,7 +12,7 @@
   <body @php(body_class())>
     @php(wp_body_open())
 
-    <div id="app" class="{{ is_checkout() ? "checkout-page" : "" }}">
+    <div id="app" class="{{ is_checkout() || is_cart() ? "checkout-page" : "" }}">
       <a class="sr-only focus:not-sr-only" href="#main">
         {{ __('Skip to content', 'sage') }}
       </a>
