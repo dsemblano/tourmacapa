@@ -1,6 +1,5 @@
 @import "tailwindcss" theme(static);
 @source "../views/";
-@source "../views/woocommerce";
 @source "../../app/";
 
 @import './fonts.css';
@@ -333,43 +332,10 @@ p {
   background: #f5f5f5;
 }
 
-/* .wp-block-woocommerce-cart {
-  @apply bg-red-600;
-} */
-
 .woocommerce-product-gallery__image a {
   pointer-events: none;
 
 }
-
-/* Exemplo básico de customização do carrinho */
-.woocommerce-cart .cart_totals {
-  background-color: #f9f9f9;
-  padding: 2rem;
-  border-radius: 0.5rem;
-}
-
-.woocommerce-cart table.shop_table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.woocommerce-cart table.shop_table th,
-.woocommerce-cart table.shop_table td {
-  @apply bg-green-400;
-  
-  border: 1px solid #ddd;
-  padding: 1rem;
-}
-
-/* .wp-block-woocommerce-cart {
-  @apply container mx-auto px-4 bg-amber-500;
-} */
-
-.wc-block-cart {
-  @apply !container;
-}
-
 .site-main,
 .checkout-page {
   @apply mt-20 lg:pt-6;

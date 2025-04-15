@@ -9,6 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
 
+  
   <body @php(body_class())>
     @php(wp_body_open())
 
@@ -19,7 +20,7 @@
 
       @include('sections.header')
 
-      <main id="main" class="main mt-24 lg:pt-6">
+      <main id="main" class="main mt-24 lg:pt-6 flex-1">
         @yield('content')
       </main>
 

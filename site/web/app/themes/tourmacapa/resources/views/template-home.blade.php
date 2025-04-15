@@ -11,7 +11,7 @@
     @include('partials/home.oquee')
     {{-- @include('partials/home.comofunciona') --}}
     @include('partials/home.planos')
-    @include('partials/home.faq')
+    {{-- @include('partials/home.faq') --}}
     @include('partials.content-page')
   @endwhile
 @endsection

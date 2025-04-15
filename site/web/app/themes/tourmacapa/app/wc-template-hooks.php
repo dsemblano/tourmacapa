@@ -199,7 +199,7 @@ remove_filter('woocommerce_product_tabs', 'woocommerce_sort_product_tabs', 99);
  *
  * @see wc_display_product_attributes()
  */
-// remove_action('woocommerce_product_additional_information', 'wc_display_product_attributes', 10);
+remove_action('woocommerce_product_additional_information', 'wc_display_product_attributes', 10);
 
 /**
  * Checkout.
