@@ -166,10 +166,3 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
-
-// Removing tabs and info on product page
-add_filter('woocommerce_product_tabs', function ($tabs) {
-    return []; // remove all tabs
-}, 98);
-
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
